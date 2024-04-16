@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
             val nickName = binding.nickInput.text.toString()
             val pwd = binding.pwdInput.text.toString()
 
-            println("$nickName, $pwd")
 
             val isNickNameRight: Boolean = nickName.equals("vinisooo")
             val isPasswordRight: Boolean = pwd.equals("123456")

@@ -8,7 +8,15 @@
     android:padding="30dp"
     tools:context=".Projects">
 
+   <Button
+    android:id="@+id/log_out"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Log out" />>
+
+
     <TextView
+        android:id="@+id/conversor_project"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
@@ -37,6 +45,5 @@
             android:text="Conversor de Euro Para Dólar"
             android:textColor="@color/gray1"></TextView>
 
-    </LinearLayout>>
-
+    </LinearLayout>
 </LinearLayout>

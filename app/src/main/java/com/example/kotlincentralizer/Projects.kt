@@ -1,5 +1,6 @@
 package com.example.kotlincentralizer
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.kotlincentralizer.databinding.ActivityProjectsBinding
@@ -12,5 +13,10 @@ class Projects : AppCompatActivity() {
         binding = ActivityProjectsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val logOutBtn = binding.logOut.setOnClickListener {
+            val logOutIntent = Intent(this, MainActivity::class.java)
+
+            startActivity(logOutIntent)
+        }
     }
 }
