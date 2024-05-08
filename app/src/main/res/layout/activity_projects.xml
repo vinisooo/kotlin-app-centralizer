@@ -25,25 +25,9 @@
         android:textSize="20sp"
         ></TextView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/gray4"
-        android:padding="20dp"
-        app:cornerRadius="8dp"
-        android:orientation="horizontal"
-        >
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_arrow"></ImageView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Conversor de Euro Para Dólar"
-            android:textColor="@color/gray1"></TextView>
-
-    </LinearLayout>
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/project_recycler"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"/>
+    
 </LinearLayout>

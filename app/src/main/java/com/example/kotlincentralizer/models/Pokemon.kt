@@ -1,4 +1,9 @@
 package com.example.kotlincentralizer.models
 
-class Pokemon {
+data class Pokemon (
+    val name: String,
+    var description: String,
+    val power: Int?
+){
+
 }

@@ -1,4 +1,8 @@
 package com.example.kotlincentralizer.models
 
-class Project {
-}
+import android.content.Intent
+
+public data class Project (
+    val name: String,
+    val intent: Intent
+)
