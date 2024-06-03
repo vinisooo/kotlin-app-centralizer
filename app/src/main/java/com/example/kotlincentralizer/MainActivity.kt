@@ -14,12 +14,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         binding.signinBtn.setOnClickListener {
             // the most secure login you've  ever seen
             val nickName = binding.nickInput.text.toString()
             val pwd = binding.pwdInput.text.toString()
-
 
             val isNickNameRight: Boolean = nickName.equals("vinisooo")
             val isPasswordRight: Boolean = pwd.equals("123456")

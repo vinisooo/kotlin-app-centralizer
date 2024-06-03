@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.Finances">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/balance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:text="R$00,00"
+            >
+
+        </TextView>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/transaction_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Descrição"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/transaction_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Valor da transação"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/add_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Adicionar transação"
+        >
+    </Button>
+
+    <Switch
+        android:id="@+id/transaction_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Entrada" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Transactions"
+        android:padding="16dp" />
+
+    <ListView
+        android:id="@+id/transactions_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </ListView>
+</LinearLayout>

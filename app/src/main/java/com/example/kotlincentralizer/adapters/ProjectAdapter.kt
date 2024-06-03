@@ -12,9 +12,13 @@ public class ProjectAdapter (
     private val projectList: MutableList<Project>
 ): RecyclerView.Adapter<ProjectAdapter.ProjectViewHolder>() {
 
-    inner class ProjectViewHolder(binding: ProjectBinding): RecyclerView.ViewHolder(binding.root)  {
+    inner class ProjectViewHolder(private val binding: ProjectBinding): RecyclerView.ViewHolder(binding.root)  {
         fun bind(project: Project) {
             binding.projectName.text = project.name
+
+            binding.projectName.setOnClickListener {
+                context.startActivity(project.intent)
+            }
         }
     }
 
@@ -26,7 +30,6 @@ public class ProjectAdapter (
     }
 
     override fun getItemCount(): Int = projectList.size
-
     override fun onBindViewHolder(holder: ProjectViewHolder, position: Int) {
         holder.bind(projectList[position])
     }
