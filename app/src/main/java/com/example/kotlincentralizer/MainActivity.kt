@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
 
                 val logInNavigate = Intent(this, Projects::class.java)
                 startActivity(logInNavigate)
+                finish()
+
             } else {
                 Toast.makeText(this, "Wrong nickname or password. Try again", Toast.LENGTH_SHORT).show()
             }

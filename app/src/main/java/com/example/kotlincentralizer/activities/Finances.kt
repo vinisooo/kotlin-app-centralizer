@@ -45,7 +45,7 @@ class Finances : AppCompatActivity() {
 
         reloadTransactions()
         emptyForm()
-        Toast.makeText(this, "Transaction added", Toast.LENGTH_SHORT)
+        Toast.makeText(this, "Transaction added", Toast.LENGTH_SHORT).show()
     }
 
     private fun emptyForm () {
@@ -88,7 +88,7 @@ class Finances : AppCompatActivity() {
 
         reloadTransactions()
 
-        Toast.makeText(this, "Transaction successfully deleted", Toast.LENGTH_SHORT)
+        Toast.makeText(this, "Transaction successfully deleted", Toast.LENGTH_SHORT).show()
     }
 
 }

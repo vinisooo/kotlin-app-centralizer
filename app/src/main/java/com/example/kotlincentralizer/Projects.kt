@@ -3,8 +3,8 @@ package com.example.kotlincentralizer
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.kotlincentralizer.activities.DogGenerator
 import com.example.kotlincentralizer.activities.Finances
 import com.example.kotlincentralizer.adapters.ProjectAdapter
 import com.example.kotlincentralizer.databinding.ActivityProjectsBinding
@@ -22,8 +22,9 @@ class Projects : AppCompatActivity() {
 
         binding.logOut.setOnClickListener {
             val logOutIntent = Intent(this, MainActivity::class.java)
-
+            logOutIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(logOutIntent)
+            finish()
         }
     }
 
@@ -45,8 +46,12 @@ class Projects : AppCompatActivity() {
         val financesIntent = Intent(this, Finances::class.java)
         val financesPage = Project("Finances", financesIntent)
 
+        val dogGeneratorIntent = Intent(this, DogGenerator::class.java)
+        val dogGeneratorPage = Project("Dog Generator", dogGeneratorIntent)
+
         projectList.add(pokePage)
         projectList.add(financesPage)
+        projectList.add(dogGeneratorPage)
         return projectList
     }
 }
