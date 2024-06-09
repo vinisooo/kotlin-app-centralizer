@@ -6,17 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="15sp"
     tools:context=".activities.Finances">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="100dp">
         <TextView
             android:id="@+id/balance"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="50dp"
-            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
             android:text="R$00,00"
             >
 
@@ -28,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Descrição"
+        android:hint="Description"
         android:inputType="text" />
 
     <EditText
@@ -36,28 +37,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Valor da transação"
+        android:hint="Transaction value"
         android:inputType="numberDecimal" />
 
-    <Button
-        android:id="@+id/add_transaction"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="Adicionar transação"
-        >
-    </Button>
 
     <Switch
         android:id="@+id/transaction_type"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Entrada" />
+        android:text="Entry" />
+
+    <Button
+        android:id="@+id/add_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="40sp"
+        android:text="Add Transaction">
+    </Button>
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Transactions"
-        android:padding="16dp" />
+        android:text="Transactions" />
 
     <ListView
         android:id="@+id/transactions_list"
